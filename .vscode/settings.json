@@ -1,0 +1,14 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/sobreiraa/Downloads/core-3.5.3.jar",
+        "/home/sobreiraa/Downloads/core-3.5.3-javadoc.jar",
+        "/home/sobreiraa/Downloads/javase-3.5.3.jar",
+        "/home/sobreiraa/Downloads/linux-20240421T142933Z-001/linux/votos/lib/postgresql-42.7.3.jar",
+        "/home/sobreiraa/Downloads/linux-20240421T142933Z-001/linux/votos/lib/postgresql-42.6.2.jar",
+        "/home/sobreiraa/Downloads/linux-20240421T142933Z-001/linux/votos/lib/postgresql-42.2.29.jre7.jar",
+        "/home/sobreiraa/Downloads/linux-20240421T142933Z-001/linux/votos/lib/postgresql-42.2.27.jre6.jar"
+    ]
+}
