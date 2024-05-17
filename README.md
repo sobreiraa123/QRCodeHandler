@@ -1,22 +1,64 @@
 # QR Code Handler
 
-QR Code Handler é um aplicativo Java que lê informações de códigos QR em faturas comerciais, armazena os dados em um banco de dados PostgreSQL e exporta os dados para um arquivo CSV. A interface gráfica do usuário é construída usando Swing.
-
-## Visão Geral
-
-Este projeto foi desenvolvido para facilitar a leitura e processamento de faturas comerciais através de códigos QR, seguindo a Especificação Técnica da Autoridade Tributária e Aduaneira. O aplicativo extrai informações detalhadas de cada fatura, armazena em um banco de dados PostgreSQL e permite exportar os dados para um formato CSV para análise posterior.
+QR Code Handler é um aplicativo Java que lê informações de códigos QR em faturas comerciais com ajuda de bibliotecas ZXing, armazena os dados em um banco de dados PostgreSQL e exporta os dados para um arquivo CSV. A interface gráfica do utilizador foi construída utilizando Java Swing.
 
 ## Funcionalidades
 
-- Leitura de códigos QR de imagens.
-- Extração e parsing de dados conforme especificação técnica.
-- Armazenamento dos dados em um banco de dados PostgreSQL.
-- Exportação dos dados para arquivos CSV.
-- Interface gráfica amigável com Java Swing.
+  - Leitura de códigos QR de imagens.
+  - Extração e parsing de dados extraidos da imagem.
+  - Armazenamento dos dados numa base de dados PostgreSQL.
+  - Exportação dos dados para arquivos CSV.
+  - Introdução do custo e tipo de despesa após a leitura do QR Code.
+  - Visualização das despesas e total gasto, categorizadas por tipo de despesa.
 
 ## Pré-requisitos
 
-- **Java JDK 8 ou superior**
-- **PostgreSQL** (com um banco de dados e tabela configurados conforme as instruções)
-- **Bibliotecas ZXing** (`core.jar` e `javase.jar`)
-- **Biblioteca JDBC do PostgreSQL** (`postgresql-<version>.jar`)
+  - Java JDK 8 ou superior
+  - PostgreSQL (com um banco de dados e tabela configurados conforme as instruções)
+  - Bibliotecas ZXing (core.jar e javase.jar)
+  - Biblioteca JDBC do PostgreSQL (postgresql-<version>.jar)
+
+## Configuração
+
+  **Clone o Repositório:**
+
+    git clone https://github.com/seu-usuario/qr-code-handler.git
+    cd qr-code-handler
+
+## Configure a base de dados em PostgreSQL:
+
+**sql**
+
+    CREATE TABLE invoices (
+      id SERIAL PRIMARY KEY,
+      nif_emitente VARCHAR(255),
+      nif_adquirente VARCHAR(255),
+      pais_adquirente VARCHAR(255),
+      tipo_documento VARCHAR(255),
+      estado_documento VARCHAR(255),
+      data_documento DATE,
+      identificacao_documento VARCHAR(255),
+      atcud VARCHAR(255),
+      espaco_fiscal VARCHAR(255),
+      base_tributavel_iva_taxa_normal DECIMAL,
+      total_iva_taxa_normal DECIMAL,
+      total_impostos DECIMAL,
+      total_documento DECIMAL,
+      hash VARCHAR(255),
+      numero_certificado VARCHAR(255),
+      outras_informacoes TEXT,
+      tipo_despesa VARCHAR(255)
+    );
+
+    
+    
+Abra o projeto numa IDE e adicione as bibliotecas necessárias.
+
+Execute a classe MainApp para iniciar a aplicação.
+
+
+
+## Utilização
+
+  Submeter dados de código QR na base de dados: Clique em "Load QR Code" e selecione uma imagem com um código QR. Introduza o total do documento e selecione ou adicione uma categoria de despesa.
+  Visualizar Despesas: Clique em "Show Expenses" para ver a lista de despesas, incluindo o tipo de despesa e o total gasto
