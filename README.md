@@ -47,6 +47,7 @@ QR Code Handler é um aplicativo Java que lê informações de códigos QR em fa
       hash VARCHAR(255),
       numero_certificado VARCHAR(255),
       outras_informacoes TEXT,
+      custo VARCHAR(255),
       tipo_despesa VARCHAR(255)
     );
 
