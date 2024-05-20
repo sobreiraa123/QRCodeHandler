@@ -53,7 +53,7 @@ QR Code Handler é um aplicativo Java que lê informações de códigos QR em fa
 
     
     
-Abra o projeto numa IDE e adicione as bibliotecas necessárias.
+Abra o projeto numa IDE (Integrated Development Environment) e adicione as bibliotecas necessárias.
 
 Execute a classe MainApp para iniciar a aplicação.
 
