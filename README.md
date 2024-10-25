@@ -1,6 +1,6 @@
 # QR Code Handler
 
-QR Code Handler é um aplicativo Java que lê informações de códigos QR em faturas comerciais com ajuda de bibliotecas ZXing, armazena os dados em um banco de dados PostgreSQL e exporta os dados para um arquivo CSV. A interface gráfica do utilizador foi construída utilizando Java Swing.
+QR Code Handler é uma app Java que lê informações de códigos QR em faturas comerciais com ajuda da biblioteca ZXing, guarda os dados numa base de dados PostgreSQL e exporta os dados para um arquivo CSV. A interface gráfica do utilizador foi construída utilizando Java Swing.
 
 ## Funcionalidades
 
@@ -14,7 +14,7 @@ QR Code Handler é um aplicativo Java que lê informações de códigos QR em fa
 ## Pré-requisitos
 
   - Java JDK 8 ou superior
-  - PostgreSQL (com um banco de dados e tabela configurados conforme as instruções)
+  - PostgreSQL (com uma base de dados e tabela configuradas conforme as instruções)
   - Bibliotecas ZXing (core.jar e javase.jar)
   - Biblioteca JDBC do PostgreSQL (postgresql-<version>.jar)
 
